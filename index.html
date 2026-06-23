@@ -2,9 +2,11 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard TI</title>
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -13,18 +15,13 @@
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <h2>💻 TI Panel</h2>
-    <ul>
-      <li>Dashboard</li>
-      <li>Máquinas</li>
-      <li>Rede</li>
-      <li>Configurações</li>
-    </ul>
+    <button onclick="toggleTheme()">🌙 Tema</button>
   </aside>
 
   <!-- MAIN -->
   <main class="main">
 
-    <h1>Monitoramento de TI</h1>
+    <h1>Monitoramento</h1>
 
     <!-- CARDS -->
     <div class="cards">
@@ -37,12 +34,10 @@
         <h3>Offline</h3>
         <p id="offlineCount">0</p>
       </div>
-
-      <div class="card total">
-        <h3>Total</h3>
-        <p id="totalCount">0</p>
-      </div>
     </div>
+
+    <!-- GRÁFICO -->
+    <canvas id="chart"></canvas>
 
     <!-- BUSCA -->
     <input type="text" id="search" placeholder="Buscar máquina...">
