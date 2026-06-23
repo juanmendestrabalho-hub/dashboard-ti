@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard TI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>💻 TI Panel</h2>
+    <ul>
+      <li>Dashboard</li>
+      <li>Máquinas</li>
+      <li>Rede</li>
+      <li>Configurações</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <h1>Monitoramento de TI</h1>
+
+    <!-- CARDS -->
+    <div class="cards">
+      <div class="card online">
+        <h3>Online</h3>
+        <p id="onlineCount">0</p>
+      </div>
+
+      <div class="card offline">
+        <h3>Offline</h3>
+        <p id="offlineCount">0</p>
+      </div>
+
+      <div class="card total">
+        <h3>Total</h3>
+        <p id="totalCount">0</p>
+      </div>
+    </div>
+
+    <!-- BUSCA -->
+    <input type="text" id="search" placeholder="Buscar máquina...">
+
+    <!-- TABELA -->
+    <table>
+      <thead>
+        <tr>
+          <th>Hostname</th>
+          <th>IP</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+  </main>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
